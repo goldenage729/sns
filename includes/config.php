@@ -5,12 +5,12 @@ $CONF = $TMPL = array();
 
 // The MySQL credentials
 $CONF['host'] = 'localhost';
-$CONF['user'] = 'YOURDBUSER';
-$CONF['pass'] = 'YOURDBPASS';
-$CONF['name'] = 'YOURDBNAME';
+$CONF['user'] = 'root';
+$CONF['pass'] = '';
+$CONF['name'] = 'phpdolphin';
 
 // The Installation URL
-$CONF['url'] = 'http://yourdomain.com';
+$CONF['url'] = 'http://localhost';
 
 // The Notifications e-mail
 $CONF['email'] = 'notifications@yourdomain.com';
