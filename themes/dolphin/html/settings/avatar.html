@@ -1,0 +1,30 @@
+{$message}
+<div class="page-inner">
+	<div class="page-input-content">
+		{$lng->profile_images_desc}
+	</div>
+</div>
+<div class="page-input-title-img-wall" style="background: url({$cover}) center center;" onclick="document.getElementById('coverselect').click(); return false"></div>
+<div class="page-input-title-img" style="background: url({$image}) center center;" onclick="document.getElementById('avatarselect').click(); return false"></div>
+<div class="page-inner">
+	<div class="page-input-content">
+		<div class="page-input-container">
+			<form id="avatar" class="uploadForm" action="{$url}/index.php?a=settings&b=avatar" method="POST" enctype="multipart/form-data">
+				<input type="file" id="avatarselect" name="avatarselect[]" style="display: none;">
+				{$token_input}
+			</form>
+			<form id="cover" class="uploadForm" action="{$url}/index.php?a=settings&b=avatar" method="POST" enctype="multipart/form-data">
+				<input type="file" id="coverselect" name="coverselect[]" style="display: none;">
+				{$token_input}
+			</form>
+		</div>
+	</div>
+</div>
+<script>
+document.getElementById("avatarselect").onchange = function() {
+    document.getElementById("avatar").submit();
+};
+document.getElementById("coverselect").onchange = function() {
+    document.getElementById("cover").submit();
+};
+</script>
