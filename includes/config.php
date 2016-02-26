@@ -1,4 +1,6 @@
 <?php
+
+// config file
 error_reporting(0);
 
 $CONF = $TMPL = array();
